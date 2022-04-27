@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "tap --reporter=list --watch",
-    "start": "node -r dotenv/config server"
+    "start": "node server",
+    "start:dev": "node -r dotenv/config server dotenv_config_path=./.env.development"
   },
   "repository": {
     "type": "git",
