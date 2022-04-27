@@ -1,10 +1,11 @@
 'use strict'
 
 const fastify = require('fastify')
+const foo = require('./foo/foo.json');
 
 function build(opts = {}) {
   const app = fastify(opts);
-  app.get('/Alive', async (request, reply) => sendReply(reply, {status: 'ok', port: process.env.PORT, url: process.env.URL}));
+  app.get('/Alive', async (request, reply) => sendReply(reply, {status: 'ok', foo}));
   return app;
 }
 
