@@ -1,11 +1,11 @@
 'use strict'
 
 const { SecretClient } = require("@azure/keyvault-secrets");
-const { ManagedIdentityCredential } = require("@azure/identity");
+const { DefaultAzureCredential } = require("@azure/identity");
 const fastify = require('fastify')
 const foo = require('./foo/foo.json');
 
-const credential = new ManagedIdentityCredential();
+const credential = new DefaultAzureCredential();
 const url = "https://" + process.env.KEY_VAULT_NAME + ".vault.azure.net";
 const client = new SecretClient(url, credential);
 
