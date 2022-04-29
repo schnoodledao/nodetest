@@ -9,9 +9,6 @@ on:
       - master
   workflow_dispatch:
 
-env:
-  PROJECT: Server
-
 jobs:
   build:
     defaults:
