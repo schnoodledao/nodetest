@@ -53,6 +53,9 @@ jobs:
         with:
           name: node-app
 
+      - name: Create folder
+        run: mkdir -p AppFolder/Server
+
       - name: Unzip artifact for deployment
         run: unzip release.zip -d AppFolder/Server
 
